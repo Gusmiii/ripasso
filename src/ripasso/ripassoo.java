@@ -1,8 +1,17 @@
+package ripasso;
 import java.util.Scanner;
-public class ripasso {
+public class ripassoo {
     public static void main(String[] args) {
         int scelta;
-        int macchina;
+        String nomemacchina;
+        String modello;
+        int prezzo = 0;
+        String [] macchine = new String[100];
+        String [] modelloauto = new String[100];
+        int [] arrayprezzo = new int [100];
+        int indice =0;
+
+
         Scanner in = new Scanner(System.in);
         System.out.println("\nMenu:");
         System.out.println("1. Aggiunta di una nuova auto");
@@ -17,8 +26,11 @@ public class ripasso {
         scelta = in.nextInt();
         switch (scelta) {
             case 1:
-                System.out.println("Opzione 1: metti il nome dell auto che vuoi aggiungere");
-                macchina = in.nextInt();
+                System.out.println("Opzione 1: inserisci nel seguente ordine questi dati :  nome,modello,prezzo");
+                nomemacchina = in.nextLine();
+                modello =in.nextLine();
+                prezzo = in.nextInt();
+
                 break;
             case 2:
                 System.out.println("Opzione 2: Visualizzazione di tutte le auto");
@@ -47,9 +59,9 @@ public class ripasso {
                 System.out.println("Uscita...");
                 return;
             default:
-                System.out.println("Opzione non valida.")
+                System.out.println("Opzione non valida.");
         }
     }
 }
- //public static int aggiunta (int [] macchine){
+
 
