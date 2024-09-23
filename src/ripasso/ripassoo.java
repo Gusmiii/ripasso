@@ -47,6 +47,10 @@ public class ripassoo {
                 break;
             case 4:
                 System.out.println("Opzione 4: Cancellazione di un'auto");
+                System.out.println("scrivi in odine la marca e il modello dell auto che ti interessa cancellare");
+                nomemacchina=in.nextLine();
+                modello=in.nextLine();
+                funzioni.cancella(macchine,modelloauto,nomemacchina,modello,indice,arrayprezzo);
 
                 break;
             case 5:
