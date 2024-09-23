@@ -39,5 +39,10 @@ public class funzioni {
             System.out.println("la macchina è stata cancellata");
         }
     }
+    public static void modifica(String[] macchine, String[] modelloauto, String nuovamacchina, String nuovomodello, int indice,double nuovoprezzo, double [] arrayprezzo) {
+        macchine[indice] = nuovamacchina;
+        modelloauto[indice]=nuovomodello;
+        arrayprezzo[indice]=nuovoprezzo;
+    }
 }
 

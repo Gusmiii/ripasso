@@ -10,6 +10,9 @@ public class ripassoo {
         String [] modelloauto = new String[100];
         double [] arrayprezzo = new double [100];
         int indice =0;
+        String nuovamacchina= "";
+        String nuovomodello = "";
+        double nuovoprezzo = 0;
 
 
         Scanner in = new Scanner(System.in);
@@ -29,7 +32,7 @@ public class ripassoo {
                 System.out.println("Opzione 1: inserisci nel seguente ordine questi dati :  nome,modello,prezzo");
                 nomemacchina = in.nextLine();
                 modello =in.nextLine();
-                prezzo = in.nextInt();
+                prezzo = in.nextDouble();
                 funzioni.aggiunta(nomemacchina,prezzo,indice,modello,macchine,modelloauto,arrayprezzo);
                 indice++;
 
@@ -55,6 +58,20 @@ public class ripassoo {
                 break;
             case 5:
                 System.out.println("Opzione 5: Modifica dei dati di un'auto");
+                System.out.println("scrivi in odine la marca e il modello dell auto che ti interessa modificare");
+                nomemacchina=in.nextLine();
+                modello=in.nextLine();
+                int i = funzioni.ricerca(macchine, modelloauto, nomemacchina, modello);
+                if (i == (-1)) {
+                    System.out.println("non è stata trovata nessuna macchina corrispondente ai parametri messi");
+                } else {
+                    System.out.println("inserisci il nuovo tipo di macchina");
+                    nuovamacchina = in.nextLine();
+                    System.out.println("inserisci il nuovo modello i maccina");
+                    nuovomodello = in.nextLine();
+                    System.out.println("inserisci il nuovo prezzo");
+                    nuovoprezzo=in.nextDouble();
+                }
 
                 break;
             case 6:
