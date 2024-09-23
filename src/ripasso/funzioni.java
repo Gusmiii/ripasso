@@ -17,8 +17,8 @@ public class funzioni {
     }
     public static void ricerca (String[] macchine, String[]modelloauto,String nomemacchina, String modello){
         for (int i = 0; i < modelloauto.length;i++){
-            if(nomemacchina.equals(macchine[i] && modello.equals(modelloauto[i]))){
-
+            if(nomemacchina.equals(macchine[i]) && modello.equals(modelloauto[i])){
+                System.out.println( "è stata trovata la macchina"+macchine[i] +"."+modelloauto[i] );
             }
         }
     }

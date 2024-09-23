@@ -43,6 +43,7 @@ public class ripassoo {
             System.out.println("scrivi in odine la marca e il modello dell auto che ti interessa cercare");
             nomemacchina=in.nextLine();
             modello=in.nextLine();
+            funzioni.ricerca(macchine,modelloauto,nomemacchina,modello);
                 break;
             case 4:
                 System.out.println("Opzione 4: Cancellazione di un'auto");
